@@ -4,21 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blooms Journal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: #f3fdf4;
+      background: linear-gradient(#f3fdf4, #e8f5e9);
       color: #2e7d32;
     }
     header {
-      background-color: #81c784;
+      background: linear-gradient(135deg, #a5d6a7, #66bb6a);
       padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 4px solid #66bb6a;
+      border-bottom: 4px solid #388e3c;
     }
     .logo-placeholder {
       width: 100px;
@@ -40,6 +38,14 @@
       transform: perspective(1000px) translateZ(10px);
       box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
     }
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+    .section p {
+      white-space: pre-line;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
     .cta-button {
       display: inline-block;
       background-color: #ffffff;
@@ -53,18 +59,6 @@
     }
     .cta-button:hover {
       background-color: #a5d6a7;
-    }
-    footer {
-      background-color: #388e3c;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem 4rem;
-    }
-    footer p {
-      margin: 0.5rem 0;
-    }
-    .social span {
-      font-weight: bold;
     }
     .gallery {
       display: flex;
@@ -85,6 +79,15 @@
       transform: scale(1.05);
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     }
+    footer {
+      background-color: #388e3c;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem 4rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
     [data-reveal] {
       opacity: 0;
       transform: translateY(20px);
@@ -96,25 +99,18 @@
     }
     @media screen and (max-width: 600px) {
       h1 {
-        font-size: 1.6rem;
-      }
-      h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
       .section {
         padding: 1.5rem 1rem;
       }
       .cta-button {
-        width: 90%;
+        width: 80%;
         font-size: 1rem;
       }
       .gallery img {
         width: 80px;
         height: 80px;
-      }
-      footer {
-        font-size: 0.9rem;
-        padding-bottom: 3rem;
       }
     }
   </style>
@@ -124,29 +120,34 @@
     <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_2e74ba1875.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
+
   <header>
-    <div class="bloomsportada.jpeg"></div>
+    <div class="logo-placeholder"></div>
     <h1 data-reveal>Blooms Journal</h1>
-    <p data-reveal>Donde las palabras florecen 🌱</p>
+    <p data-reveal>Tu diario emocional y ecológico 🌱</p>
   </header>
 
   <section class="section" data-reveal>
     <h2>¿Qué es Blooms Journal?</h2>
-    <p>Más que un diario, Blooms Journal es una herramienta terapéutica para reconectar contigo mismo. Confeccionado a mano con amor, cada página de este diario contiene semillas que florecen al ser plantadas, simbolizando la transformación de tus emociones en vida.
+    <p>
+      Más que un diario, Blooms Journal es una herramienta terapéutica para reconectar contigo mismo. Confeccionado a mano con amor, cada página de este diario contiene semillas que florecen al ser plantadas, simbolizando la transformación de tus emociones en vida.
+      
+      Es un espacio donde puedes escribir lo que no sabes cómo decir, liberar lo que pesa en tu interior y, al final, dejarlo ir para ver crecer flores desde tus emociones más profundas.
 
-Es un espacio donde puedes escribir lo que no sabes cómo decir, liberar lo que pesa en tu interior y, al final, dejarlo ir para ver crecer flores desde tus emociones más profundas.
-
-Blooms Journal es autocuidado, es naturaleza, es poesía escrita por tu alma.</p>
+      Blooms Journal es autocuidado, es naturaleza, es poesía escrita por tu alma.
+    </p>
   </section>
 
   <section class="section" data-reveal>
     <h2>Detalles del producto</h2>
-    <p>Nombre: Blooms Journal
-        Origen: Hecho a mano en México 🇲🇽
-        Material: Papel reciclado biodegradable con semillas de flores silvestres
-        Formato: Bitácora emocional con hojas suaves y delicadas
-        Contenido: Diario + etiqueta ecológica con instrucciones y frases inspiradoras
-        Objetivo: Sanar, soltar y florecer a través de la escritura emocional</p>
+    <p>
+      Nombre: Blooms Journal
+      Origen: Hecho a mano en México 🇲🇽
+      Material: Papel reciclado biodegradable con semillas de flores silvestres
+      Formato: Bitácora emocional con hojas suaves y delicadas
+      Contenido: Diario + etiqueta ecológica con instrucciones y frases inspiradoras
+      Objetivo: Sanar, soltar y florecer a través de la escritura emocional
+    </p>
   </section>
 
   <section class="section" data-reveal>
@@ -160,16 +161,19 @@ Blooms Journal es autocuidado, es naturaleza, es poesía escrita por tu alma.</p
 
   <section class="section" data-reveal>
     <h2>Nuestra filosofía</h2>
-    <p>Blooms Journal nace de un proceso de sanación personal y se convierte en un puente entre el alma y la tierra. Creemos que escribir es sembrar. Que sentir es nutrir. Que soltar es florecer.
-
-Cada diario es único, como cada historia. Está pensado para personas que buscan reconectarse con su interior, cerrar ciclos y honrar su proceso emocional a través de un gesto poético y ecológico.
-
-Con Blooms Journal, tus palabras no se quedan en el papel. Se transforman. Se integran a la tierra. Y regresan en forma de flores.</p>
+    <p>
+      Creemos en la sanación a través de la escritura
+      y la reconexión con la naturaleza.
+      Escribir para sanar, sembrar para transformar.
+    </p>
   </section>
 
   <section class="section" data-reveal>
     <h2>Conecta con la naturaleza</h2>
-    <p>Transforma tus pensamientos en vida. Blooms Journal no solo es un diario, es una experiencia ecológica y emocional.</p>
+    <p>
+      Transforma tus pensamientos en vida.
+      Blooms Journal no solo es un diario, es una experiencia ecológica y emocional.
+    </p>
     <a class="cta-button" href="#">Adquiere el tuyo ahora</a>
   </section>
 
@@ -192,6 +196,7 @@ Con Blooms Journal, tus palabras no se quedan en el papel. Se transforman. Se in
         }
       });
     }, { threshold: 0.1 });
+
     revealElements.forEach(el => observer.observe(el));
   </script>
 </body>
