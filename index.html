@@ -3,261 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blooms Journal — Siembra tus emociones</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Blooms Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --green: #81c784;
-      --green-dark: #388e3c;
-      --bg: #f9fefc;
-      --white: #fff;
-      --text: #333;
-      --accent: #aed581;
-      --gray: #666;
-      --shadow: rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
+      margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      background-color: #f3fdf4;
+      color: #2e7d32;
     }
-
     header {
-      background: linear-gradient(135deg, var(--green-dark), var(--green));
-      padding: 100px 20px 80px;
-      color: var(--white);
+      background-color: #81c784;
+      padding: 2rem 1rem;
       text-align: center;
-      position: relative;
+      border-bottom: 4px solid #66bb6a;
     }
-
-    header img.logo {
-      width: 130px;
-      margin-bottom: 20px;
+    .logo-placeholder {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 1rem;
+      background-color: white;
+      border-radius: 50%;
     }
-
-    header h1 {
-      font-size: 3.6em;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
     }
-
-    header p {
-      font-size: 1.6em;
-      opacity: 0.95;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    nav {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      margin-left: 25px;
-      font-size: 1.05em;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    section {
-      margin-bottom: 100px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
-    }
-
-    section h2 {
-      font-size: 2.8em;
-      color: var(--green-dark);
-      margin-bottom: 30px;
+    .section {
+      padding: 2rem 1rem;
       text-align: center;
-    }
-
-    section p {
-      font-size: 1.3em;
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-
-    .highlight, .qr-box, .img-box {
-      background-color: var(--white);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 6px 22px var(--shadow);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      will-change: transform;
     }
-
-    .highlight:hover,
-    .qr-box:hover,
-    .img-box:hover,
-    .cta a:hover {
-      transform: perspective(700px) translateZ(12px) scale(1.03);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    .section:hover {
+      transform: perspective(1000px) translateZ(10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-    }
-
-    .qr-box img, .img-box img {
-      max-width: 100%;
-      border-radius: 12px;
-    }
-
-    .cta {
-      background: var(--green);
-      color: var(--white);
-      text-align: center;
-      padding: 80px 20px;
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .cta h3 {
-      font-size: 2.4em;
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      font-size: 1.3em;
-    }
-
-    .cta a {
+    .cta-button {
       display: inline-block;
-      margin-top: 25px;
-      background: var(--white);
-      color: var(--green-dark);
-      padding: 14px 40px;
-      border-radius: 50px;
+      background-color: #ffffff;
+      color: #2e7d32;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.3em;
+      margin-top: 1rem;
       transition: all 0.3s ease;
     }
-
-    .cta a:hover {
-      background: var(--accent);
-      color: var(--white);
+    .cta-button:hover {
+      background-color: #a5d6a7;
     }
-
     footer {
-      background-color: var(--green-dark);
-      color: var(--white);
+      background-color: #388e3c;
+      color: #fff;
       text-align: center;
-      padding: 50px 20px;
-      font-size: 1em;
+      padding: 2rem 1rem 4rem;
     }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer p {
+      margin: 0.5rem 0;
     }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.6em;
+    .social span {
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: none;
+    }
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
       }
-      nav {
-        position: static;
-        margin-top: 25px;
+      h2 {
+        font-size: 1.2rem;
+      }
+      .section {
+        padding: 1.5rem 1rem;
+      }
+      .cta-button {
+        width: 90%;
+        font-size: 1rem;
+      }
+      .gallery img {
+        width: 80px;
+        height: 80px;
+      }
+      footer {
+        font-size: 0.9rem;
+        padding-bottom: 3rem;
       }
     }
   </style>
 </head>
 <body>
-
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_2e74ba1875.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
   <header>
-    <img src="bloomsportada.jpeg" alt="Logo Blooms Journal" class="logo">
-    <h1>Blooms Journal</h1>
-    <p>Donde las palabras florecen</p>
-    <nav>
-      <a href="#producto">Producto</a>
-      <a href="#galeria">Galería</a>
-      <a href="#filosofia">Filosofía</a>
-    </nav>
+    <div class="bloomsportada.jpeg"></div>
+    <h1 data-reveal>Blooms Journal</h1>
+    <p data-reveal>Donde las palabras florecen 🌱</p>
   </header>
 
-  <main>
+  <section class="section" data-reveal>
+    <h2>¿Qué es Blooms Journal?</h2>
+    <p>Más que un diario, Blooms Journal es una herramienta terapéutica para reconectar contigo mismo. Confeccionado a mano con amor, cada página de este diario contiene semillas que florecen al ser plantadas, simbolizando la transformación de tus emociones en vida.
 
-    <section id="introduccion">
-      <h2>¿Qué es Blooms Journal?</h2>
-      <div class="highlight">
-        <p>Más que un diario, Blooms Journal es una herramienta terapéutica para reconectar contigo mismo. Confeccionado a mano con amor, cada página de este diario contiene semillas que florecen al ser plantadas, simbolizando la transformación de tus emociones en vida.</p>
-        <p>Es un espacio donde puedes escribir lo que no sabes cómo decir, liberar lo que pesa en tu interior y, al final, dejarlo ir para ver crecer flores desde tus emociones más profundas.</p>
-        <p>Blooms Journal es autocuidado, es naturaleza, es poesía escrita por tu alma.</p>
-      </div>
-    </section>
+Es un espacio donde puedes escribir lo que no sabes cómo decir, liberar lo que pesa en tu interior y, al final, dejarlo ir para ver crecer flores desde tus emociones más profundas.
 
-    <section id="producto">
-      <h2>Detalles del Producto</h2>
-      <div class="grid">
-        <div class="highlight">
-          <p><strong>Nombre:</strong> Blooms Journal</p>
-          <p><strong>Origen:</strong> Hecho a mano en México 🇲🇽</p>
-          <p><strong>Material:</strong> Papel reciclado biodegradable con semillas de flores silvestres</p>
-          <p><strong>Formato:</strong> Bitácora emocional con hojas suaves y delicadas</p>
-          <p><strong>Contenido:</strong> Diario + etiqueta ecológica con instrucciones y frases inspiradoras</p>
-          <p><strong>Objetivo:</strong> Sanar, soltar y florecer a través de la escritura emocional</p>
-        </div>
+Blooms Journal es autocuidado, es naturaleza, es poesía escrita por tu alma.</p>
+  </section>
 
-        </div>
-      </div>
-    </section>
+  <section class="section" data-reveal>
+    <h2>Detalles del producto</h2>
+    <p>Nombre: Blooms Journal
 
-    <section id="galeria">
-      <h2>Galería</h2>
-      <div class="grid">
-        <div class="img-box"><img src="1.jpeg" alt="Portada artesanal del diario"></div>
-        <div class="img-box"><img src="2.jpeg" alt="Diseño emocional de páginas internas"></div>
-        <div class="img-box"><img src="3.jpeg" alt="Etiqueta ecológica con instrucciones"></div>
-      </div>
-    </section>
+Origen: Hecho a mano en México 🇲🇽
 
-    <section id="filosofia">
-      <h2>Filosofía que florece</h2>
-      <p>Blooms Journal nace de un proceso de sanación personal y se convierte en un puente entre el alma y la tierra. Creemos que escribir es sembrar. Que sentir es nutrir. Que soltar es florecer.</p>
-      <p>Cada diario es único, como cada historia. Está pensado para personas que buscan reconectarse con su interior, cerrar ciclos y honrar su proceso emocional a través de un gesto poético y ecológico.</p>
-      <p>Con Blooms Journal, tus palabras no se quedan en el papel. Se transforman. Se integran a la tierra. Y regresan en forma de flores.</p>
-    </section>
+Material: Papel reciclado biodegradable con semillas de flores silvestres
 
-    <section class="cta">
-      <h3>Escribe. Planta. Florece.</h3>
-      <p>Convierte tu historia en una semilla. Cultiva tu proceso emocional y permite que tus palabras se transformen en naturaleza viva.</p>
-      <a href="#">Adquiere el tuyo ahora</a>
-    </section>
+Formato: Bitácora emocional con hojas suaves y delicadas
 
-  </main>
+Contenido: Diario + etiqueta ecológica con instrucciones y frases inspiradoras
 
-  <footer>
-    &copy; 2025 Blooms Journal · Diario emocional & ecológico 🌱<br>
-    Síguenos en <strong>@blooms.journal</strong> — Instagram · TikTok · Facebook
+Objetivo: Sanar, soltar y florecer a través de la escritura emocional</p>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="1.jpeg" alt="Ejemplo 1">
+      <img src="2.jpeg" alt="Ejemplo 2">
+      <img src="3.jpeg" alt="Ejemplo 3">
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Nuestra filosofía</h2>
+    <p>Blooms Journal nace de un proceso de sanación personal y se convierte en un puente entre el alma y la tierra. Creemos que escribir es sembrar. Que sentir es nutrir. Que soltar es florecer.
+
+Cada diario es único, como cada historia. Está pensado para personas que buscan reconectarse con su interior, cerrar ciclos y honrar su proceso emocional a través de un gesto poético y ecológico.
+
+Con Blooms Journal, tus palabras no se quedan en el papel. Se transforman. Se integran a la tierra. Y regresan en forma de flores.</p>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Conecta con la naturaleza</h2>
+    <p>Transforma tus pensamientos en vida. Blooms Journal no solo es un diario, es una experiencia ecológica y emocional.</p>
+    <a class="cta-button" href="#">Adquiere el tuyo ahora</a>
+  </section>
+
+  <footer data-reveal>
+    <p>© 2025 Blooms Journal · Diario emocional & ecológico 🌿</p>
+    <p>Síguenos en <span>@blooms.journal</span> — Instagram · TikTok · Facebook</p>
+    <div class="gallery">
+      <img src="img1.jpeg" alt="Naturaleza 1" />
+      <img src="img2.jpeg" alt="Naturaleza 2" />
+      <img src="img3.jpeg" alt="Naturaleza 3" />
+    </div>
   </footer>
 
+  <script>
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
