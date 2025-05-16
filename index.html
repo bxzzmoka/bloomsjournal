@@ -99,6 +99,22 @@
   margin: 0 auto 1rem;
   object-fit: cover;
 }
+    .hero-image {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
 
 @media screen and (max-width: 600px) {
   .logo {
@@ -134,7 +150,11 @@
     <h1 data-reveal>Blooms Journal</h1>
     <p data-reveal>Tu diario emocional y ecológico 🌱</p>
   </header>
-
+  
+  <section class="hero-image" data-reveal>
+  <img src="5.jpeg" alt="Imagen destacada de Blooms Journal">
+</section>
+  
   <section class="section" data-reveal>
     <h2>¿Qué es Blooms Journal?</h2>
     <p>
